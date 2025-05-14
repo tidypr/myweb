@@ -1,23 +1,14 @@
-import type { Metadata } from 'next';
-import { Jersey_25 } from 'next/font/google';
 import './globals.css';
+import { jersey25 } from '@/assets/fonts/fonts';
+
+import type { Metadata } from 'next';
+
+import Providers from './providers';
 import Header from '@/components/header/Header';
 import Main from '@/components/ui/Main';
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
-
-const jersey25 = Jersey_25({
-  subsets: ['latin'],
-  weight: '400',
-});
+// shadcn/ui
+import { Toaster } from '@/components/ui/sonner';
 
 export const metadata: Metadata = {
   title: `tidypr's website`,
@@ -31,10 +22,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='ko' className='scroll-smooth'>
+    <html lang='ko' className='scroll-smooth' suppressHydrationWarning>
       <body className={`${jersey25.className} antialiased`}>
-        <Header />
-        <Main>{children}</Main>
+        <Providers>
+          <Header />
+          <Main>{children}</Main>
+          <Toaster />
+        </Providers>
       </body>
     </html>
   );
