@@ -1,0 +1,19 @@
+// import { Geist, Geist_Mono } from 'next/font/google';
+
+// export const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
+
+// export const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
+
+
+import { Jersey_25 } from 'next/font/google';
+
+export const jersey25 = Jersey_25({
+  subsets: ['latin'],
+  weight: '400',
+});
