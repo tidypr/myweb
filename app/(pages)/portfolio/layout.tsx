@@ -1,3 +1,5 @@
+import PortfolioHeader from "@/components/portfolio/PortfolioHeader";
+
 export default function Portfoliolayout({
   children,
 }: {
@@ -5,7 +7,7 @@ export default function Portfoliolayout({
 }) {
   return (
     <>
-      <h1>Portfolio Layout</h1>
+      <PortfolioHeader />
       {children}
     </>
   );

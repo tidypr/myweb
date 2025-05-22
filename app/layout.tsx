@@ -1,14 +1,15 @@
 import './globals.css';
-import { jersey25 } from '@/assets/fonts/fonts';
+import { jersey25 } from '@/assets/fonts';
 
 import type { Metadata } from 'next';
 
 import Providers from './providers';
 import Header from '@/components/header/Header';
-import Main from '@/components/ui/Main';
+import Main from '@/components/common/Main';
 
 // shadcn/ui
 import { Toaster } from '@/components/ui/sonner';
+import Footer from '@/components/footer/Footer';
 
 export const metadata: Metadata = {
   title: `tidypr's website`,
@@ -28,6 +29,7 @@ export default function RootLayout({
           <Header />
           <Main>{children}</Main>
           <Toaster />
+          <Footer />
         </Providers>
       </body>
     </html>
