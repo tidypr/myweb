@@ -16,7 +16,7 @@ export default function UserMenu() {
     <DropdownMenu>
       {/*  */}
       <DropdownMenuTrigger asChild>
-        <Button variant='outline' className='h-10 w-10'>
+        <Button variant='outline' className='h-9 w-9'>
           <FaUserCircle className='h-6 w-6 rounded-full' />
         </Button>
       </DropdownMenuTrigger>
