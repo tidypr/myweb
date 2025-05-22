@@ -4,7 +4,6 @@ import TagList from './TagList';
 
 export default function ProjectItem({ ...props }) {
   const { title, context, period, skills } = props;
-  console.log(skills);
   return (
     <Card className='rounded-sm p-2'>
       <div className='flex w-full items-center gap-2'>
