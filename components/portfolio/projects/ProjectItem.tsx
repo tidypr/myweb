@@ -5,7 +5,7 @@ import TagList from './TagList';
 
 import { ProjectList } from '@/types/types';
 
-export default function ProjectItem({ ...props }: ProjectList) {
+export default function ProjectItem({ ...props }: ProjectList[number]) {
   const {
     title,
     context,

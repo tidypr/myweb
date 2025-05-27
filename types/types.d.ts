@@ -8,6 +8,7 @@ export type actionFunction = (preStateList: any, formAction: FormData) => Promis
 
 
 export type ProjectList = {
+  id: number;
   title: string;
   context: string[];
   period: string;
@@ -20,7 +21,7 @@ export type ProjectList = {
   // links
   githubLink?: string;
   siteLink?: string;
-};
+}[];
 
 
 export type SkillGroup = {
