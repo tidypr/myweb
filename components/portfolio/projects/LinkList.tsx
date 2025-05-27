@@ -1,4 +1,8 @@
-import { GithubIcon, Link, MousePointerClickIcon } from 'lucide-react';
+import {
+  GithubIcon,
+  Link as LickIcon,
+  MousePointerClickIcon,
+} from 'lucide-react';
 import LinkItem from './LinkItem';
 
 import { ProjectList } from '@/types/types';
@@ -11,15 +15,15 @@ export default function LinkList({
   const { id, githubLink, siteLink } = card;
 
   return (
-    <div className='flex w-full max-w-56 items-center justify-between gap-2'>
+    <div className='flex w-fit max-w-72 items-center justify-between gap-2'>
       <LinkItem link={githubLink || ''} text='Git' target='_blank'>
-        <GithubIcon />
+        <GithubIcon className='h-4 w-4' />
       </LinkItem>
       <LinkItem link={siteLink || ''} text='Site' target='_blank'>
-        <Link />
+        <LickIcon className='h-4 w-4' />
       </LinkItem>
       <LinkItem link={`/project/${id}`} text='More'>
-        <MousePointerClickIcon />
+        <MousePointerClickIcon className='h-4 w-4' />
       </LinkItem>
     </div>
   );
