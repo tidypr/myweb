@@ -45,4 +45,4 @@ next-env.d.ts
 .env.*
 
 generated
-/assets/images/test
+# /assets/images/test

@@ -1,55 +1,39 @@
 'use client';
 
 import Link from 'next/link';
-import { Button } from '../../ui/button';
 import { BanIcon } from 'lucide-react';
+
+type LinkItemProps = {
+  link: string;
+  text: string;
+  target?: string;
+  children: React.ReactNode;
+};
 
 export default function LinkItem({
   link,
   text,
   target,
   children,
-}: {
-  target?: string;
-  link: string;
-  text: string;
-  children: React.ReactNode;
-}) {
-  const handleButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.stopPropagation();
-  };
-
-  if (!link)
+}: LinkItemProps) {
+  if (!link) {
     return (
-      <div className='bg-muted flex items-center gap-2 rounded-full border px-3 py-1 text-red-500'>
-        <Button
-          onClick={handleButtonClick}
-          asChild
-          variant='ghost'
-          size='icon'
-          className='flex h-4 w-4 gap-1 overflow-hidden rounded-full'
-        >
+      <div className='bg-muted flex w-full items-center justify-center gap-2 rounded-full border px-3 py-1 text-red-500'>
+        <button className='flex h-4 w-4 items-center justify-center gap-1 rounded-full'>
           <BanIcon />
-        </Button>
+        </button>
         <span className='text-sm'>Site</span>
       </div>
     );
+  }
 
   return (
     <Link
       href={link}
       target={target}
-      className='bg-muted flex items-center gap-2 rounded-full border px-3 py-1'
+      className='bg-muted flex w-full items-center justify-center gap-2 rounded-full border px-3 py-1'
     >
-      <Button
-        onClick={handleButtonClick}
-        asChild
-        variant='ghost'
-        size='icon'
-        className='flex h-4 w-4 gap-1 overflow-hidden rounded-full'
-      >
-        {children}
-      </Button>
+      {children}
       <span className='text-sm'>{text}</span>
     </Link>
   );

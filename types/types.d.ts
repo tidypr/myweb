@@ -10,12 +10,17 @@ export type actionFunction = (preStateList: any, formAction: FormData) => Promis
 export type ProjectList = {
   id: number;
   title: string;
-  context: string;
+  context: string[];
+  period: string;
+  startDate: string;
+  endDate: string;
+  skills: string[];
+  images: StaticImageData[];
+  isTeamProject: boolean;
 
-
-  // 링크
-  githubLink: string;
-  siteLink: string;
+  // links
+  githubLink?: string;
+  siteLink?: string;
 }[];
 
 

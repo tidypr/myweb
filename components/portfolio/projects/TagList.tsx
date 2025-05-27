@@ -23,7 +23,7 @@ export default function TagList({
     //     </div>
     //   ))}
     // </div>
-    <div className='mt-4 flex flex-wrap gap-2'>
+    <div className='flex flex-wrap gap-2'>
       {tags.map((tag, idx) => (
         <span
           key={idx}
